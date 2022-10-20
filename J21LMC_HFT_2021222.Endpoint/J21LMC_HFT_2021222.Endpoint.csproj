@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\J21LMC_HFT_2021222.Logic\J21LMC_HFT_2021222.Logic.csproj" />
+    <ProjectReference Include="..\J21LMC_HFT_2021222.Models\J21LMC_HFT_2021222.Models.csproj" />
+    <ProjectReference Include="..\J21LMC_HFT_2021222.Repository\J21LMC_HFT_2021222.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
