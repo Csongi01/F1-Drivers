@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J21LMC_HFT_2021222.Reposito
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J21LMC_HFT_2021222.Endpoint", "J21LMC_HFT_2021222.Endpoint\J21LMC_HFT_2021222.Endpoint.csproj", "{03B4FBCB-0743-4D03-BC8F-35F43F6D348E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J21LMC_HFT_2021222.Test", "J21LMC_HFT_2021222.Test\J21LMC_HFT_2021222.Test.csproj", "{CC39963C-B341-4421-A571-DA4920604B80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{03B4FBCB-0743-4D03-BC8F-35F43F6D348E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03B4FBCB-0743-4D03-BC8F-35F43F6D348E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03B4FBCB-0743-4D03-BC8F-35F43F6D348E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC39963C-B341-4421-A571-DA4920604B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC39963C-B341-4421-A571-DA4920604B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC39963C-B341-4421-A571-DA4920604B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC39963C-B341-4421-A571-DA4920604B80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
