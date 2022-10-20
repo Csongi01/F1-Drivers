@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J21LMC_HFT_2021222.Client", "J21LMC_HFT_2021222.Client\J21LMC_HFT_2021222.Client.csproj", "{0BC91E42-E517-4F26-B4AF-6575A8722852}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J21LMC_HFT_2021222.Models", "J21LMC_HFT_2021222.Models\J21LMC_HFT_2021222.Models.csproj", "{C768AFE5-59BA-41AA-B407-64D6031BAD12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0BC91E42-E517-4F26-B4AF-6575A8722852}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BC91E42-E517-4F26-B4AF-6575A8722852}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BC91E42-E517-4F26-B4AF-6575A8722852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C768AFE5-59BA-41AA-B407-64D6031BAD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C768AFE5-59BA-41AA-B407-64D6031BAD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C768AFE5-59BA-41AA-B407-64D6031BAD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C768AFE5-59BA-41AA-B407-64D6031BAD12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
