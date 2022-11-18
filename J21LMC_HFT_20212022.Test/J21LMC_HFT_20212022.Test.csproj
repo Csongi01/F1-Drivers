@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="Moq" Version="4.17.1" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\J21LMC_HFT_2021222.Logic\J21LMC_HFT_2021222.Logic.csproj" />
+    <ProjectReference Include="..\J21LMC_HFT_2021222.Models\J21LMC_HFT_2021222.Models.csproj" />
+    <ProjectReference Include="..\J21LMC_HFT_2021222.Repository\J21LMC_HFT_2021222.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
