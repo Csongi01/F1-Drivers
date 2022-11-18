@@ -1,9 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+  
+  
+  
   <ItemGroup>
     <ProjectReference Include="..\J21LMC_HFT_2021222.Logic\J21LMC_HFT_2021222.Logic.csproj" />
     <ProjectReference Include="..\J21LMC_HFT_2021222.Models\J21LMC_HFT_2021222.Models.csproj" />
