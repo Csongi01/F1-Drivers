@@ -110,17 +110,20 @@ namespace J21LMC_HFT_2021222.Client
                     Console.WriteLine(item.race_code + ": " + item.race_code + ": " + item.date + ": " + item.length + ": " + item.laps);
                 }
             }
-            Console.ReadLine();
-
             if (entity == "Result")
             {
                 List<Result> results = rest.Get<Result>("result");
+                ;
                 foreach (var item in results)
                 {
                     Console.WriteLine(item.result_Id + ": " + item.race_code + ": " + item.pilot_Id + ": " + item.start_pos + ": " + item.finish_pos);
                 }
             }
-          
+            Console.ReadLine();
+
+        }
+        static void ListResult(string entity)
+        { 
         }
         static void Listnoncrud(string entity)
         {
