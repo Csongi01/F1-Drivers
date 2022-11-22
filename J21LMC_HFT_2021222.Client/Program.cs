@@ -107,13 +107,14 @@ namespace J21LMC_HFT_2021222.Client
                 List<Race> races = rest.Get<Race>("race");
                 foreach (var item in races)
                 {
-                    Console.WriteLine(item.race_code + ": " + item.race_code + ": " + item.date + ": " + item.length + ": " + item.laps);
+                    Console.WriteLine(item.race_code + ": " + item.racename + ": " + item.date + ": " + item.length + ": " + item.laps);
                 }
-            }
+            }          
+
             if (entity == "Result")
             {
-                List<Result> results = rest.Get<Result>("result");
-                ;
+                List<Result> results = rest.Get<Result>("result");                 
+
                 foreach (var item in results)
                 {
                     Console.WriteLine(item.result_Id + ": " + item.race_code + ": " + item.pilot_Id + ": " + item.start_pos + ": " + item.finish_pos);
@@ -121,9 +122,6 @@ namespace J21LMC_HFT_2021222.Client
             }
             Console.ReadLine();
 
-        }
-        static void ListResult(string entity)
-        { 
         }
         static void Listnoncrud(string entity)
         {
@@ -163,17 +161,17 @@ namespace J21LMC_HFT_2021222.Client
                 Console.Write($"New name [old: {one.Name}]: ");
                 string name = Console.ReadLine();
                 one.Name = name;
-                rest.Put(one, "name");
+                rest.Put(one, "pilot");
             }
             if (entity == "Race")
             {
                 Console.Write("Enter Race's code to update: ");
                 string id = Console.ReadLine();
                 Race one = rest.Get<Race>(id, "race");
-                Console.Write($"New racecode [old: {one.race_code}]: ");
-                string racecode = Console.ReadLine();
-                one.race_code = racecode;
-                rest.Put(one, "racecode");
+                Console.Write($"New racecode [old: {one.racename}]: ");
+                string racename = Console.ReadLine();
+                one.racename = racename;
+                rest.Put(one, "race");
             }
             if (entity == "Result")
             {
@@ -183,7 +181,7 @@ namespace J21LMC_HFT_2021222.Client
                 Console.Write($"New result finis position [old: {one.finish_pos}]: ");
                 int finish_pos = int.Parse(Console.ReadLine());
                 one.finish_pos = finish_pos;
-                rest.Put(one, "name");
+                rest.Put(one, "result");
             }
             if (entity == "Team")
             {
@@ -193,7 +191,7 @@ namespace J21LMC_HFT_2021222.Client
                 Console.Write($"New team name [old: {one.team_name}]: ");
                 string team_name = Console.ReadLine();
                 one.team_name = team_name;
-                rest.Put(one, "team_name");
+                rest.Put(one, "team");
             }
         }
         static void Delete(string entity)
