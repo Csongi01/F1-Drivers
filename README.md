@@ -1,3 +1,5 @@
+<h3 align="center">About the app - 🏎️ Formula 1 drivers 🏎️</h3>
+<p align="justify">The project focuses on Formula 1 drivers. It entails building a layered .Net CRUD application with version control support and developing graphical client applications in WPF and JavaScript. </p>  
 <h1 align="center">Hi 👋, I'm Csongor Kapitány</h1>
 <h3 align="center">A passionate Computer Science Engineering student from Hungary</h3>
 
