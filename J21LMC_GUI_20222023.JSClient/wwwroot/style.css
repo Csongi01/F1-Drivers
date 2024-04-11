@@ -1,0 +1,65 @@
+﻿body {
+}
+
+#buttons {
+    text-align: center;
+}
+
+a:link, a:visited {
+    background-color: #ADD8E6;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    background-color: #ADD8E6;
+}
+
+#devdiv {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 40%;
+    height: 300px;
+    margin-right: 180px;
+}
+
+    #devdiv lable, button, input {
+        margin: 2px;
+        padding: 2px;
+    }
+
+    #devdiv lable {
+        font-weight: bolder;
+    }
+
+#tableD {
+    float: left;
+    width: 50%;
+}
+
+#tableP {
+    float: left;
+    width: 25%;
+}
+
+#updateButton {
+    display: none;
+    flex-direction: column;
+}

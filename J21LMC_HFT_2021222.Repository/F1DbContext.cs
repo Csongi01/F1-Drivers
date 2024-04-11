@@ -64,7 +64,6 @@ namespace J21LMC_HFT_2021222.Repository
 
             });
 
-
             modelBuilder.Entity<Result>().HasKey(result => new { result.pilot_Id, result.race_code });
 
 
@@ -85,15 +84,15 @@ namespace J21LMC_HFT_2021222.Repository
             #endregion
             #region races
             Race[] races = new Race[] {
-            new Race() { race_code = "AUS", date = DateTime.Parse("2021-03-15"), racename = "Ausztrál Nagydíj", location = "Melbourne", laps = 58, length = 5303 },
-            new Race() { race_code = "CHI", date = DateTime.Parse("2021-04-12"), racename = "Kínai Nagydíj", location = "Shanghai", laps = 56, length = 5451 },
-            new Race() { race_code = "BAH", date = DateTime.Parse("2021-04-19"), racename = "Bahreini Nagydíj", location = "Szahír", laps = 57, length = 5412 },
-            new Race() { race_code = "SPA", date = DateTime.Parse("2021-05-15"), racename = "Spanyol Nagydíj", location = "Barcelona", laps = 66, length = 4655 },
-            new Race() { race_code = "MON", date = DateTime.Parse("2021-05-24"), racename = "Monacói Nagydíj", location = "Montreal", laps = 70, length = 4361 },
-            new Race() { race_code = "GER", date = DateTime.Parse("2021-07-19"), racename = "Német Nagydíj", location = "TBD", laps = 67, length = 4574 },
-            new Race() { race_code = "HUN", date = DateTime.Parse("2021-07-26"), racename = "Magyar Nagydíj", location = "Mogyoród", laps = 70, length = 4381 },
-            new Race() { race_code = "BEL", date = DateTime.Parse("2021-08-23"), racename = "Belga Nagydíj", location = "Francorchamps", laps = 44, length = 7004 },
-            new Race() { race_code = "ITA", date = DateTime.Parse("2021-09-06"), racename = "Olasz Nagydíj", location = "Monza", laps = 53, length = 5793 }
+            new Race() {race_Id=0, race_code = "AUS", date = DateTime.Parse("2021-03-15"), racename = "Ausztrál Nagydíj", location = "Melbourne", laps = 58, length = 5303 },
+            new Race() {race_Id=1, race_code = "CHI", date = DateTime.Parse("2021-04-12"), racename = "Kínai Nagydíj", location = "Shanghai", laps = 56, length = 5451 },
+            new Race() {race_Id=2, race_code = "BAH", date = DateTime.Parse("2021-04-19"), racename = "Bahreini Nagydíj", location = "Szahír", laps = 57, length = 5412 },
+            new Race() {race_Id=3, race_code = "SPA", date = DateTime.Parse("2021-05-15"), racename = "Spanyol Nagydíj", location = "Barcelona", laps = 66, length = 4655 },
+            new Race() {race_Id=4, race_code = "MON", date = DateTime.Parse("2021-05-24"), racename = "Monacói Nagydíj", location = "Montreal", laps = 70, length = 4361 },
+            new Race() {race_Id=5, race_code = "GER", date = DateTime.Parse("2021-07-19"), racename = "Német Nagydíj", location = "TBD", laps = 67, length = 4574 },
+            new Race() {race_Id=6, race_code = "HUN", date = DateTime.Parse("2021-07-26"), racename = "Magyar Nagydíj", location = "Mogyoród", laps = 70, length = 4381 },
+            new Race() {race_Id=7, race_code = "BEL", date = DateTime.Parse("2021-08-23"), racename = "Belga Nagydíj", location = "Francorchamps", laps = 44, length = 7004 },
+            new Race() {race_Id=8, race_code = "ITA", date = DateTime.Parse("2021-09-06"), racename = "Olasz Nagydíj", location = "Monza", laps = 53, length = 5793 }
             };
             #endregion
             #region teams

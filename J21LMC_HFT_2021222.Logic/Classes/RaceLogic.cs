@@ -20,12 +20,15 @@ namespace J21LMC_HFT_2021222.Logic
 
         public void Create(Race item)
         {
+            int i = 9;
             if (item.race_code.Length >3)
             {
                 throw new ArgumentException("Race code is too long.");
             }
-
+            item.race_Id = i;
+          
             this.repo.Create(item);
+            i++;
         }
 
         public void Delete(string id)

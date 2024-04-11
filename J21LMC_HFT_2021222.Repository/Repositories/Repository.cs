@@ -18,7 +18,7 @@ namespace J21LMC_HFT_2021222.Repository
 
         public void Create(T item)
         {
-            ctx.Set<T>().Add(item);
+            ctx.Set<T>().Add(item);           
             ctx.SaveChanges();
         }
         public void Delete(string id)

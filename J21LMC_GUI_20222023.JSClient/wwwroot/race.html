@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>    
+    <meta charset="utf-8" />
+    <title>Race Catalog</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>    
+    <div id="buttons">
+        <a href="pilot.html" style="text-decoration:none" target="_self">Pilots</a>
+        <a href="team.html" style="text-decoration:none" target="_self">Teams</a>
+        <a href="noncrud.html" style="text-decoration:none" target="_self">Non-CRUDs</a>
+    </div>
+    <h1>Race Catalog</h1>
+    <div id="formdiv">
+        <label>Race Code</label>
+        <input type="text" id="racecode" />
+        <label>Race Name</label>
+        <input type="text" id="racename" />
+        <label>Location</label>
+        <input type="text" id="racelocation" />
+        <label>Laps</label>
+        <input type="text" id="racelaps" />
+        <label>Length</label>
+        <input type="text" id="racelength" />
+
+        <label>Date</label>
+        <input type="text" id="racedate" />
+        <button type="button" onclick="create()">Add Race</button>
+    </div>
+
+
+    <div id="updateformdiv">
+        <label> Race Name</label>
+        <input type="text" id="racenametoUpdate" />
+        <label>Location</label>
+        <input type="text" id="racelocationtoUpdate" />
+
+        <label> Laps</label>
+        <input type="text" id="racelapstoUpdate" />
+        <label>Length</label>
+        <input type="text" id="racelengthtiontoUpdate" />
+        <label>Date</label>
+        <input type="text" id="racedatetoUpdate" />
+
+
+        <button type="button" onclick="updateR()">Update Race</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Race code</th>
+                <th>Race name</th>
+                <th>Location</th>
+                <th>Laps</th>
+                <th>Length</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="racescript.js"></script>
+</body>
+</html>

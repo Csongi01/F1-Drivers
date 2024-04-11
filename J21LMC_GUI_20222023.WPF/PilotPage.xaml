@@ -1,0 +1,41 @@
+﻿<Page x:Class="J21LMC_GUI_20222023.WPF.PilotPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:J21LMC_GUI_20222023.WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="PilotPage">
+
+    <Page.DataContext>
+        <local:PilotViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>           
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" ItemsSource="{Binding Pilots}" SelectedItem="{Binding SelectedPilot}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" >
+                        <Label Content="{Binding Name}" />
+                        <Label Content="{Binding dateofbirth}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Column="1" Background="White">
+            <Label Content="Name" Background="LightBlue" Padding="10" />
+            <TextBox Text="{Binding SelectedPilot.Name}" Padding="10" Margin="0,0,0,30" />
+            <Label Content="Date of birth" Background="LightBlue" Padding="10" />
+            <TextBox Text="{Binding SelectedPilot.dateofbirth}" Padding="10" Margin="0,0,0,30" />
+            <Button Content="Create Pilot" Command="{Binding CreatePilotCommand}" Margin="10" Padding="10" />
+            <Button Content="Delete Pilot" Command="{Binding DeletePilotCommand}" Margin="10" Padding="10" />
+            <Button Content="Update Pilot" Command="{Binding UpdatePilotCommand}" Margin="10" Padding="10" />
+            <Label Content="{Binding ErrorMessage}" FontSize="18" Foreground="Red" HorizontalContentAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Page>

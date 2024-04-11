@@ -1,6 +1,8 @@
 ﻿using J21LMC_HFT_2021222.Logic;
 using J21LMC_HFT_2021222.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using MovieDbApp.Endpoint.Services;
 using System.Collections.Generic;
 
 namespace J21LMC_HFT_2021222.Endpoint.Controllers
@@ -10,9 +12,12 @@ namespace J21LMC_HFT_2021222.Endpoint.Controllers
     public class PilotController : Controller
     {
         IPilotLogic logic;
-        public PilotController(IPilotLogic logic)
+        IHubContext<SignalRHub> hub;
+        public PilotController(IPilotLogic logic, IHubContext<SignalRHub> hub)
         {
             this.logic = logic;
+            this.hub = hub;
+
         }
 
         [HttpGet]
@@ -31,18 +36,22 @@ namespace J21LMC_HFT_2021222.Endpoint.Controllers
         public void Create([FromBody] Pilot value)
         {
             this.logic.Create(value);
+            this.hub.Clients.All.SendAsync("PilotCreated", value);
         }
 
         [HttpPut]
         public void Put([FromBody] Pilot value)
         {
             this.logic.Update(value);
+            this.hub.Clients.All.SendAsync("PilotUpdated", value);
         }
 
         [HttpDelete("{id}")]
         public void Delete(string id)
         {
+            var pilotToDelete = this.logic.Read(id);
             this.logic.Delete(id);
+            this.hub.Clients.All.SendAsync("PilotDeleted", pilotToDelete);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace J21LMC_HFT_2021222.Models
         public int dateofbirth { get; set; }     
 
         [ForeignKey(nameof(Team))]
-        public int team_id { get; set; }
+        public int? team_id  { get; set; }
 
         [NotMapped]
         public virtual Team Team { get; set; }

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Non-CRUDs</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="buttons">
+        <a href="pilot.html" style="text-decoration:none" target="_self">Pilots</a>
+        <a href="team.html" style="text-decoration:none" target="_self">Teams</a>
+        <a href="race.html" style="text-decoration:none" target="_self">Races</a>        
+    </div>
+    <h1> Non-CRUDs methods</h1>
+    <table id="tableP">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody id="resultareaC">
+        </tbody>
+    </table>
+    <div id="devdiv">
+        <button type="button" onclick="test()">PilotTeamInfo</button>
+        <button type="button" onclick="testtop()">Top2YoungestPilot</button>
+        <button type="button" onclick="testbest()">BestPilot</button>
+        <button type="button" onclick="testMogyorod()">MogyorodResults</button>
+        <button type="button" onclick="testAVG()">AveragefinishPos</button>
+        
+    </div>
+
+
+    <script src="noncrudscript.js"></script>
+</body>
+</html>

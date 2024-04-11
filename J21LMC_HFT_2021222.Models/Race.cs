@@ -12,6 +12,10 @@ namespace J21LMC_HFT_2021222.Models
     [Table("races")]
     public class Race 
     {
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int race_Id { get; set; }
+
         [Key]
         [Required]
         public string race_code { get; set; }        

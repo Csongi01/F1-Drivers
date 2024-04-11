@@ -15,6 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MovieDbApp.Endpoint.Services;
 
 namespace J21LMC_HFT_2021222.Endpoint
 {
@@ -29,7 +30,7 @@ namespace J21LMC_HFT_2021222.Endpoint
       
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<F1DbContext>();
+            services.AddScoped<F1DbContext>();
 
             services.AddTransient<IRepository<Pilot>, PilotRepository>();
             services.AddTransient<IRepository<Race>, RaceRepository>();
@@ -40,7 +41,7 @@ namespace J21LMC_HFT_2021222.Endpoint
             services.AddTransient<IRaceLogic, RaceLogic>();
             services.AddTransient<IResultLogic, ResultLogic>();
             services.AddTransient<ITeamLogic, TeamLogic>();
-
+            services.AddSignalR();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -67,6 +68,12 @@ namespace J21LMC_HFT_2021222.Endpoint
             }));
 
 
+            app.UseCors(x => x
+                .AllowCredentials()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithOrigins("http://localhost:12307"));
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -74,6 +81,7 @@ namespace J21LMC_HFT_2021222.Endpoint
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<SignalRHub>("/hub");
             });
         }
     }

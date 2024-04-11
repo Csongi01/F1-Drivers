@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <title>F1 UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="buttons">
+        <a href="team.html" style="text-decoration:none" target="_self">Teams</a>
+        <a href="race.html" style="text-decoration:none" target="_self">Races</a>
+        <a href="noncrud.html" style="text-decoration:none" target="_self">Non-CRUDs</a>
+    </div>
+    <h1>Pilot Catalog</h1>
+
+    
+        <div id="formdiv">
+            <label>Pilot Name</label>
+            <input type="text" id="pilotname" />
+            <label>Date of birth</label>
+            <input type="text" id="dateofbirth" />
+            <button type="button" onclick="create()">Add Pilot</button>
+        </div>
+
+
+        <div id="updateformdiv">
+            <label>Pilot Name</label>
+            <input type="text" id="pilotnametoUpdate" />
+            <label>Date of birth</label>
+            <input type="text" id="dateofbirthtoUpdate" />
+            <button type="button" onclick="update()">Update Pilot</button>
+        </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date of birth</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -41,7 +41,7 @@ namespace J21LMC_HFT_20212022.Test
                 throw new NotImplementedException();
             }
 
-            public void Delete(string id)
+            public void Delete(int id)
             {
                 throw new NotImplementedException();
             }
@@ -51,7 +51,7 @@ namespace J21LMC_HFT_20212022.Test
                 throw new NotImplementedException();
             }
 
-            Team IRepository<Team>.Read(string id)
+            Team IRepository<Team>.Read(int id)
             {
                 throw new NotImplementedException();
             }
@@ -80,12 +80,12 @@ namespace J21LMC_HFT_20212022.Test
                 throw new NotImplementedException();
             }
 
-            public void Delete(string id)
+            public void Delete(int id)
             {
                 throw new NotImplementedException();
             }
 
-            public Pilot Read(string id)
+            public Pilot Read(int id)
             {
                 throw new NotImplementedException();
             }
@@ -122,12 +122,12 @@ namespace J21LMC_HFT_20212022.Test
                 throw new NotImplementedException();
             }
 
-            public void Delete(string id)
+            public void Delete(int id)
             {
                 throw new NotImplementedException();
             }
 
-            public Result Read(string id)
+            public Result Read(int id)
             {
                 throw new NotImplementedException();
             }
@@ -196,12 +196,12 @@ namespace J21LMC_HFT_20212022.Test
                 throw new NotImplementedException();
             }
 
-            public void Delete(string id)
+            public void Delete(int id)
             {
                 throw new NotImplementedException();
             }
 
-            public Race Read(string id)
+            public Race Read(int id)
             {
                 throw new NotImplementedException();
             }
@@ -330,11 +330,11 @@ namespace J21LMC_HFT_20212022.Test
         [Test]
         public void PilotDelete()
         {
-            pilot_logic_mock.Delete("1");
+            pilot_logic_mock.Delete(1);
 
             // Assert
             mockPilotRepository
-                .Verify(r => r.Delete(It.IsAny<string>()), Times.Once);
+                .Verify(r => r.Delete(It.IsAny<int>()), Times.Once);
         }
 
         [Test]
@@ -342,11 +342,11 @@ namespace J21LMC_HFT_20212022.Test
         {
             // Arrange
             mockPilotRepository
-                .Setup(r => r.Read(It.IsAny<string>()))
+                .Setup(r => r.Read(It.IsAny<int>()))
                 .Returns(value: null);
 
             // Act + Assert
-            Assert.Throws<ArgumentException>(() => pilot_logic_mock.Read("13"));
+            Assert.Throws<ArgumentException>(() => pilot_logic_mock.Read(13));
 
         }
 
@@ -363,11 +363,11 @@ namespace J21LMC_HFT_20212022.Test
             };
 
             mockPilotRepository
-                .Setup(r => r.Read("6"))
+                .Setup(r => r.Read(6))
                 .Returns(expected);
 
             // Act
-            var actual = pilot_logic_mock.Read("6");
+            var actual = pilot_logic_mock.Read(6);
 
             // Assert
             Assert.That(actual, Is.EqualTo(expected));
