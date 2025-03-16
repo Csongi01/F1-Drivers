@@ -2,7 +2,7 @@
 <p align="justify">The project focuses on Formula 1 drivers. It entails building a layered .Net CRUD application with version control support and developing graphical client applications in WPF and JavaScript. </p>  
 
 <h1 align="center">Hi 👋, I'm Csongor Kapitány</h1>
-<h3 align="center">A passionate Computer Science Engineering student from Hungary |<img src = "https://em-content.zobj.net/source/apple/391/flag-hungary_1f1ed-1f1fa.png" width="25" />
+<h3 align="center">A passionate Software Engineer from Hungary |<img src = "https://em-content.zobj.net/source/apple/391/flag-hungary_1f1ed-1f1fa.png" width="25" />
 </h3>
 
 <img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
